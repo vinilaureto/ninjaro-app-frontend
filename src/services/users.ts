@@ -11,7 +11,7 @@ export async function createUser(
 ): Promise<CreateUserResponse> {
 	try {
 		const response = await fetch(
-			import.meta.env.VITE_API_BASE_URL + "/api/v1/users",
+			import.meta.env.VITE_API_BASE_URL + "/app/v1/users",
 			{
 				method: "POST",
 				credentials: "include",
@@ -49,7 +49,7 @@ export async function authUser(
 ): Promise<AuthUserResponse> {
 	try {
 		const reponse = await fetch(
-			import.meta.env.VITE_API_BASE_URL + "/api/v1/users/auth",
+			import.meta.env.VITE_API_BASE_URL + "/app/v1/users/auth",
 			{
 				method: "POST",
 				credentials: "include",
