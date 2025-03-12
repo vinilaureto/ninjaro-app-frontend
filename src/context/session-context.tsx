@@ -60,7 +60,7 @@ type SessionData = {
 
 async function fetchSessionData(): Promise<SessionData> {
 	const response = await fetch(
-		`${import.meta.env.VITE_API_BASE_URL}/api/v1/sessions/me`,
+		`${import.meta.env.VITE_API_BASE_URL}/app/v1/sessions/me`,
 		{
 			credentials: "include",
 		}
