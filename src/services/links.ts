@@ -5,7 +5,7 @@ export async function createLink(
 ): Promise<CreateLinkResponse> {
 	try {
 		const response = await fetch(
-			import.meta.env.VITE_API_BASE_URL + "/api/v1/links",
+			import.meta.env.VITE_API_BASE_URL + "/app/v1/links",
 			{
 				method: "POST",
 				credentials: "include",
@@ -37,7 +37,7 @@ type UpdateLinkReponse = { success: true } | { success: false };
 export async function updateLink(link: Link): Promise<UpdateLinkReponse> {
 	try {
 		const response = await fetch(
-			import.meta.env.VITE_API_BASE_URL + "/api/v1/links/" + link.id,
+			import.meta.env.VITE_API_BASE_URL + "/app/v1/links/" + link.id,
 			{
 				method: "PUT",
 				credentials: "include",
@@ -71,7 +71,7 @@ type GetAllLinksResponse =
 export async function getAllLinks(): Promise<GetAllLinksResponse> {
 	try {
 		const response = await fetch(
-			import.meta.env.VITE_API_BASE_URL + "/api/v1/links",
+			import.meta.env.VITE_API_BASE_URL + "/app/v1/links",
 			{
 				method: "GET",
 				credentials: "include",
@@ -97,7 +97,7 @@ type GetLinkByIdResponse = { link: Link; success: true } | { success: false };
 export async function getLinkById(id: string): Promise<GetLinkByIdResponse> {
 	try {
 		const response = await fetch(
-			import.meta.env.VITE_API_BASE_URL + `/api/v1/links/${id}`,
+			import.meta.env.VITE_API_BASE_URL + `/app/v1/links/${id}`,
 			{
 				method: "GET",
 				credentials: "include",
